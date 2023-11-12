@@ -1,4 +1,4 @@
-# AssetDataExtractor
+# Asset Data Extractor
 ### Opening a Project or Room File (.yyp and .yy)
 To open a **project** or **room file** in the program:
 
