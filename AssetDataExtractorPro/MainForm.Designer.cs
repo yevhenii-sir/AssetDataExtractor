@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             roomslb = new ListBox();
             layerslb = new ListBox();
             mainMenuStrip = new MenuStrip();
@@ -129,7 +130,7 @@
             // sourceToolStripMenuItem
             // 
             sourceToolStripMenuItem.Name = "sourceToolStripMenuItem";
-            sourceToolStripMenuItem.Size = new Size(180, 22);
+            sourceToolStripMenuItem.Size = new Size(118, 22);
             sourceToolStripMenuItem.Text = "Source";
             sourceToolStripMenuItem.Click += sourceToolStripMenuItem_Click;
             // 
@@ -137,7 +138,7 @@
             // 
             versionToolStripMenuItem.DisplayStyle = ToolStripItemDisplayStyle.Text;
             versionToolStripMenuItem.Name = "versionToolStripMenuItem";
-            versionToolStripMenuItem.Size = new Size(180, 22);
+            versionToolStripMenuItem.Size = new Size(118, 22);
             versionToolStripMenuItem.Text = "Version: ";
             // 
             // label1
@@ -263,6 +264,7 @@
             Controls.Add(layerslb);
             Controls.Add(roomslb);
             Controls.Add(mainMenuStrip);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = mainMenuStrip;
             MinimumSize = new Size(993, 560);
             Name = "MainForm";
