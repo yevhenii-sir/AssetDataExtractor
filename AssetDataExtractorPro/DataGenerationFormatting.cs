@@ -89,7 +89,6 @@ namespace AssetDataExtractorPro
 
             _gridView.CellClick += DataGridView_CellClick;
             _gridView.CellEndEdit += DataGridView_EndEdit;
-            //_gridView.CellFormatting += DataGridView_CellFormatting;
         }
 
         private void DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -100,7 +99,6 @@ namespace AssetDataExtractorPro
                     ToggleCellType(e.RowIndex, true);
                     _gridView.Refresh();
                 }));
-                //_gridView.InvalidateRow(e.RowIndex); // Refresh the row
             }
         }
         private void DataGridView_EndEdit(object sender, DataGridViewCellEventArgs e)

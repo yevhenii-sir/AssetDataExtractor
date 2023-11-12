@@ -36,6 +36,9 @@
             recentlyOpenedToolStripMenuItem = new ToolStripMenuItem();
             projectTSM = new ToolStripMenuItem();
             refreshToolStripMenuItem = new ToolStripMenuItem();
+            infoToolStripMenuItem = new ToolStripMenuItem();
+            sourceToolStripMenuItem = new ToolStripMenuItem();
+            versionToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             label2 = new Label();
             resultFormattingTB = new TextBox();
@@ -46,7 +49,6 @@
             upSelectedItemBtn = new Button();
             downSelectedItemBtn = new Button();
             openProjectFileDialog = new OpenFileDialog();
-            sourceToolStripMenuItem = new ToolStripMenuItem();
             mainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataFormatGV).BeginInit();
             SuspendLayout();
@@ -75,7 +77,7 @@
             // 
             // mainMenuStrip
             // 
-            mainMenuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, projectTSM, refreshToolStripMenuItem, sourceToolStripMenuItem });
+            mainMenuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, projectTSM, refreshToolStripMenuItem, infoToolStripMenuItem });
             mainMenuStrip.Location = new Point(0, 0);
             mainMenuStrip.Name = "mainMenuStrip";
             mainMenuStrip.Size = new Size(977, 24);
@@ -92,14 +94,14 @@
             // openFileToolStripMenuItem
             // 
             openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            openFileToolStripMenuItem.Size = new Size(180, 22);
+            openFileToolStripMenuItem.Size = new Size(171, 22);
             openFileToolStripMenuItem.Text = "Open...";
             openFileToolStripMenuItem.Click += openFileToolStripMenuItem_Click;
             // 
             // recentlyOpenedToolStripMenuItem
             // 
             recentlyOpenedToolStripMenuItem.Name = "recentlyOpenedToolStripMenuItem";
-            recentlyOpenedToolStripMenuItem.Size = new Size(180, 22);
+            recentlyOpenedToolStripMenuItem.Size = new Size(171, 22);
             recentlyOpenedToolStripMenuItem.Text = "Recently opened...";
             // 
             // projectTSM
@@ -114,6 +116,29 @@
             refreshToolStripMenuItem.Size = new Size(58, 20);
             refreshToolStripMenuItem.Text = "Refresh";
             refreshToolStripMenuItem.Click += refreshToolStripMenuItem_Click;
+            // 
+            // infoToolStripMenuItem
+            // 
+            infoToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            infoToolStripMenuItem.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            infoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { sourceToolStripMenuItem, versionToolStripMenuItem });
+            infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            infoToolStripMenuItem.Size = new Size(40, 20);
+            infoToolStripMenuItem.Text = "Info";
+            // 
+            // sourceToolStripMenuItem
+            // 
+            sourceToolStripMenuItem.Name = "sourceToolStripMenuItem";
+            sourceToolStripMenuItem.Size = new Size(180, 22);
+            sourceToolStripMenuItem.Text = "Source";
+            sourceToolStripMenuItem.Click += sourceToolStripMenuItem_Click;
+            // 
+            // versionToolStripMenuItem
+            // 
+            versionToolStripMenuItem.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            versionToolStripMenuItem.Name = "versionToolStripMenuItem";
+            versionToolStripMenuItem.Size = new Size(180, 22);
+            versionToolStripMenuItem.Text = "Version: ";
             // 
             // label1
             // 
@@ -220,14 +245,6 @@
             openProjectFileDialog.Filter = "GameMaker Files (*.yyp, *.yy)|*.yyp;*.yy|All files (*.*)|*.*";
             openProjectFileDialog.RestoreDirectory = true;
             // 
-            // sourceToolStripMenuItem
-            // 
-            sourceToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
-            sourceToolStripMenuItem.Name = "sourceToolStripMenuItem";
-            sourceToolStripMenuItem.Size = new Size(55, 20);
-            sourceToolStripMenuItem.Text = "Source";
-            sourceToolStripMenuItem.Click += sourceToolStripMenuItem_Click;
-            // 
             // MainForm
             // 
             AllowDrop = true;
@@ -279,6 +296,8 @@
         private ToolStripMenuItem openFileToolStripMenuItem;
         private ToolStripMenuItem recentlyOpenedToolStripMenuItem;
         private OpenFileDialog openProjectFileDialog;
+        private ToolStripMenuItem infoToolStripMenuItem;
+        private ToolStripMenuItem versionToolStripMenuItem;
         private ToolStripMenuItem sourceToolStripMenuItem;
     }
 }

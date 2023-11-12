@@ -40,6 +40,9 @@ namespace AssetDataExtractorPro
             dataFormatGV.RowsAdded += DataFormatGV_RowsAdded;
             dataFormatGV.CellValueChanged += DataFormatGV_CellValueChanged;
             dataFormatGV.CellClick += DataFormatGV_CellValueChanged;
+
+            versionToolStripMenuItem.Text = $"Version: {Application.ProductVersion}";
+            this.Text = $"Asset Data Extractor {Application.ProductVersion}";
         }
 
         private void DataFormatGV_CellValueChanged(object? sender, DataGridViewCellEventArgs e)
@@ -386,7 +389,7 @@ namespace AssetDataExtractorPro
 
         private void sourceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string url = "https://github.com/yevhenii-sir?tab=repositories";
+            string url = "https://github.com/yevhenii-sir/AssetDataExtractor";
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
     }
